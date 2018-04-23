@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'course',
     'organization',
     'operation',
+    'xadmin',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,4 @@ STATIC_URL = '/static/'
 
 # 将所有的应用放到apps文件夹中
 sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
+sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
