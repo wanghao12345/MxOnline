@@ -16,7 +16,9 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# 将所有的应用放到apps文件夹中
+sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
+sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -43,8 +45,6 @@ INSTALLED_APPS = [
     'course',
     'organization',
     'operation',
-    'xadmin',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +131,3 @@ AUTH_USER_MODEL = 'users.UserProfile'
 STATIC_URL = '/static/'
 
 
-# 将所有的应用放到apps文件夹中
-sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
-sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
