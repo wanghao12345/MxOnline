@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'course',
     'organization',
     'operation',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,10 @@ STATICFILES_DIRS = (
 )
 
 
+# 发送邮件配置
+EMAIL_HOST = "smtp.qq.com"  # SMTP服务器主机
+EMAIL_PORT = 25             # 端口
+EMAIL_HOST_USER = "1030901220@qq.com"       # 邮箱地址
+EMAIL_HOST_PASSWORD = "oowteuntgdqjdhci"    # 密码
+EMAIL_USE_TLS= True
+EMAIL_FROM = "1030901220@qq.com"            # 邮箱地址
